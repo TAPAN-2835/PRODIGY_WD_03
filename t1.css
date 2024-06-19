@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #8052ec, #d161ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+html {
+    font-size: 40px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.heading {
+    font-size: 3.5em; /* Increased font size for better visibility */
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1em;
+}
+
+.container {
+    width: 70vmin;
+    height: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+}
+
+.button-option {
+    background: #ffffff;
+    height: 22vmin;
+    width: 22vmin;
+    border: none;
+    border-radius: 8px;
+    font-size: 12vmin;
+    color: #d161ff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#restart {
+    font-size: 1.7em; /* Increased font size for better visibility */
+    padding: 1.2em; /* Increased padding for better visibility */
+    border-radius: 8px;
+    background-color: #0a0027;
+    color: #ffffff;
+    border: none;
+    margin: 1.5em auto 0 auto;
+    display: block;
+}
+
+.popup {
+    background: linear-gradient(135deg, #8052ec, #d161ff);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 12vmin;
+}
+
+#new-game {
+    font-size: 0.8em;
+    padding: 0.8em 1.2em;
+    background-color: #0a0027;
+    color: #ffffff;
+    border-radius: 0.2em;
+    border: none;
+}
+
+#message {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1em;
+}
+
+.popup.hide {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .heading {
+        font-size: 3em; /* Adjusted font size for smaller screens */
+    }
+
+    .button-option {
+        height: calc(30vw - 2%);
+        width: calc(30vw - 2%);
+        font-size: calc(10vw - 2%);
+    }
+
+    #restart {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+        padding: 1em;
+    }
+
+    .container {
+        gap: 2vw;
+    }
+}
